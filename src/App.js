@@ -102,22 +102,20 @@ function NavBar() {
 
 	return (
 		auth.currentUser && (
-			<div className='fixed w-full flex sm:items-center justify-between py-2 border-b-2 dark:border-gray-600 border-gray-200 bg-white dark:bg-gray-800 text-gray-800 dark:text-white'>
+			<div className='fixed w-full flex sm:items-center justify-between py-2 border-b-2 dark:border-gray-600 border-gray-200 bg-white dark:bg-gray-800 text-gray-800 dark:text-white relative'>
 				<div className='flex items-center space-x-2'>
 					<img
 						src={auth.currentUser.photoURL}
 						alt='Profile'
-						className='w-10 h-10 ml-3 rounded-full'
+						className='w-10 h-10 ml-3 rounded-full absolute left-0'
 					/>
-					<div className='flex flex-col leading-tight'>
-						<div className='flex text-left flex-col'>
-							<p className='text-base text-gray-900 dark:text-white'>
-								{auth.currentUser.displayName}
-							</p>
-							<p className='text-xs text-gray-700 dark:text-gray-400'>
-								{auth.currentUser.email}
-							</p>
-						</div>
+					<div className='flex text-left flex-col ml-12'>
+						<p className='text-base text-gray-900 dark:text-white truncate'>
+							{auth.currentUser.displayName}
+						</p>
+						<p className='text-xs text-gray-700 dark:text-gray-400 truncate'>
+							{auth.currentUser.email}
+						</p>
 					</div>
 				</div>
 				<div className='flex items-center'>
@@ -281,10 +279,10 @@ function ChatMessage(props) {
 							</div>
 						) : (
 							<div>
-								<p className='rounded-lg rounded-b-none text-xs px-2 py-1 dark:text-white text-gray-700 border-b-0 border-gray-400 border-2 shadow-xl'>
+								<p className='rounded-lg rounded-b-none text-xs px-2 py-1 dark:text-white text-gray-700 border-b-0 border-gray-400 border-2 shadow-xl text-600 font-medium uppercase'>
 									{user}
 								</p>
-								<p className='rounded-lg text-sm rounded-t-none rounded-bl-none px-2 py-1 dark:text-white text-gray-700 border-gray-400 border-2 shadow-xl'>
+								<p className='rounded-lg text-sm rounded-t-none rounded-bl-none px-2 py-1 dark:text-white border-t-0 text-gray-700 border-gray-400 border-2 shadow-xl'>
 									{body}
 								</p>
 							</div>

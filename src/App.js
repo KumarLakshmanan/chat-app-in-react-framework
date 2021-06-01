@@ -281,10 +281,10 @@ function ChatMessage(props) {
 							</div>
 						) : (
 							<div>
-								<p className='rounded-lg rounded-b-none text-xs px-4 py-1 dark:text-white dark:border-white text-gray-700 border-gray-700 border-2'>
+								<p className='rounded-lg rounded-b-none text-xs px-4 py-1 dark:text-white text-gray-700 border-b-0 bg-gray-400 border-2'>
 									{user}
 								</p>
-								<p className='rounded-lg text-sm rounded-t-none rounded-bl-none px-4 py-1  dark:text-white dark:border-white text-gray-700 border-gray-700 border-2'>
+								<p className='rounded-lg text-sm rounded-t-none rounded-bl-none px-4 py-1 dark:text-white text-gray-700 border-2'>
 									{body}
 								</p>
 							</div>

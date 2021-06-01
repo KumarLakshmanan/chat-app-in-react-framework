@@ -102,14 +102,14 @@ function NavBar() {
 
 	return (
 		auth.currentUser && (
-			<div className='fixed w-full flex sm:items-center justify-between py-2 border-b-2 dark:border-gray-600 border-gray-200 bg-white dark:bg-gray-800 text-gray-800 dark:text-white relative'>
+			<div className='fixed w-full flex sm:items-center justify-between py-2 border-b-2 dark:border-gray-600 border-gray-200 bg-white dark:bg-gray-800 text-gray-800 dark:text-white'>
 				<div className='flex items-center space-x-2'>
 					<img
 						src={auth.currentUser.photoURL}
 						alt='Profile'
-						className='w-10 h-10 ml-3 rounded-full absolute left-0'
+						className='w-10 h-10 ml-3 rounded-full'
 					/>
-					<div className='flex text-left flex-col ml-12'>
+					<div className='flex text-left flex-col'>
 						<p className='text-base text-gray-900 dark:text-white truncate'>
 							{auth.currentUser.displayName}
 						</p>
@@ -272,17 +272,17 @@ function ChatMessage(props) {
 				<div className='flex items-end'>
 					<div className='flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start'>
 						{uid === auth.currentUser.uid ? (
-							<div>
+							<div className='shadow-xl'>
 								<p className='rounded-lg text-sm rounded-all rounded-br-none px-4 py-2 bg-blue-600 text-white '>
 									{body}
 								</p>
 							</div>
 						) : (
-							<div>
-								<p className='rounded-lg rounded-b-none text-xs px-2 py-1 dark:text-white text-gray-700 border-b-0 border-gray-400 border-2 shadow-xl text-600 font-medium uppercase'>
+							<div className='shadow-xl'>
+								<p className='rounded-lg rounded-b-none text-xs px-2 py-1 dark:text-white text-gray-700 border-b-0 border-gray-400 border-2 text-600 font-medium uppercase pb-0'>
 									{user}
 								</p>
-								<p className='rounded-lg text-sm rounded-t-none rounded-bl-none px-2 py-1 dark:text-white border-t-0 text-gray-700 border-gray-400 border-2 shadow-xl'>
+								<p className='rounded-lg text-sm rounded-t-none rounded-bl-none px-2 py-1 dark:text-white border-t-0 text-gray-700 border-gray-400 border-2 shadow-xl pt-0'>
 									{body}
 								</p>
 							</div>

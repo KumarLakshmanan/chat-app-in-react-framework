@@ -111,10 +111,10 @@ function NavBar() {
 					/>
 					<div className='flex flex-col leading-tight'>
 						<div className='flex text-left flex-col'>
-							<p className='text-base text-gray-900 ml-3 dark:text-white'>
+							<p className='text-base text-gray-900 dark:text-white'>
 								{auth.currentUser.displayName}
 							</p>
-							<p className='text-xs text-gray-700 ml-3 dark:text-gray-400'>
+							<p className='text-xs text-gray-700 dark:text-gray-400'>
 								{auth.currentUser.email}
 							</p>
 						</div>
